@@ -1,0 +1,18 @@
+.task-edit{
+    background-color: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.task-edit-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

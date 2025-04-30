@@ -1,0 +1,23 @@
+.container-tasks{
+    background-color: #1b1a41;
+    padding:  40px;
+    width: 450px;
+    margin-top: 50px;
+}
+
+.form-task{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.task-btn{
+    background-color: #845afc;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+
+.list-task{
+    margin-top: 20px;
+}
