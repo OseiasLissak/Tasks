@@ -28,7 +28,7 @@ function Home(){
     //Delete Task
     const DeleteTask = (id) => {
         const newList = tasks.filter((task) => {
-            return task.id != id
+            return task.id !== id
         });
 
         setTasks(newList);
