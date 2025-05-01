@@ -39,7 +39,7 @@ function Home(){
         let newList = [];
 
         tasks.map((task) => {
-            if(task.id == id)
+            if(task.id === id)
                 task.edit = true;
 
             newList.push(task);
@@ -53,7 +53,7 @@ function Home(){
         let newList = [];
 
         tasks.map((task) => {
-            if(task.id == id) {
+            if(task.id === id) {
                 task.edit = false;
                 task.description = description
 
@@ -71,7 +71,7 @@ function Home(){
         let newList = [];
 
         tasks.map((task) => {
-            if(task.id == id)
+            if(task.id === id)
                 task.edit = false;
 
             newList.push(task);
@@ -85,7 +85,7 @@ function Home(){
         let newList = [];
 
         tasks.map((task) => {
-            if(task.id == id)
+            if(task.id === id)
                 task.done = done;
 
             newList.push(task);
