@@ -42,7 +42,7 @@ function Home(){
             if(task.id === id)
                 task.edit = true;
 
-            newList.push(task);
+            return newList.push(task);
         });
 
         setTasks(newList);
@@ -59,7 +59,7 @@ function Home(){
 
             }
 
-            newList.push(task);
+            return newList.push(task);
         });
 
         setTasks(newList);
@@ -74,7 +74,7 @@ function Home(){
             if(task.id === id)
                 task.edit = false;
 
-            newList.push(task);
+            return newList.push(task);
         });
 
         setTasks(newList);
@@ -88,7 +88,7 @@ function Home(){
             if(task.id === id)
                 task.done = done;
 
-            newList.push(task);
+            return newList.push(task);
         });
 
         setTasks(newList);
