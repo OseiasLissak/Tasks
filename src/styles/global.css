@@ -36,3 +36,10 @@ body{
 .icon-green{
     fill: rgb(94, 180, 91);
 }
+
+.logo{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    
+}

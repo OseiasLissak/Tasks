@@ -1,18 +1,26 @@
 import "./tarefa.css"
-
+ 
 function Task(props){
     return <div className="task">
         <div>
             {
                 props.done ? <>
-                    <input onClick={(e) => props.onClickTaskComplete(props.id, e.target.checked)} checked className="task-checkbox" type="checkbox" id="task"/>
+                    <input onClick={(e) => props.onClickTaskComplete(props.id, e.target.checked)} checked                 
+                    className="task-checkbox" 
+                    type="checkbox" 
+                    id="task"/>
+                    
                     <span className="task-done">
                         {props.description}
                     </span>
                 </>
                 :
                 <>
-                    <input onClick={(e) => props.onClickTaskComplete(props.id, e.target.checked)} className="task-checkbox" type="checkbox" id="task"/>
+                    <input onClick={(e) => props.onClickTaskComplete(props.id, e.target.checked)} 
+                    className="task-checkbox" 
+                    type="checkbox" 
+                    id="task"/>
+                    
                     <span>
                         {props.description}
                     </span>
@@ -28,5 +36,4 @@ function Task(props){
 }
 
 export default Task; 
-
 

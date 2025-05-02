@@ -6,24 +6,32 @@ import { v4 as uuid } from "uuid"
 
 function Home(){
 
+  
+
     const [tasks, setTasks] = useState([]);
     const [description, setDescription] = useState("");
 
-
-    //Add Ta
-    function AddTask(){
-        let task = {
-            id: uuid(),
-            description: description,
-            done: false,
-            edit: false
+        function AddTask() {
+            // Remover espaços em branco e verificar se o campo está vazio
+            if (description.trim().length === 0) {
+                alert('O campo "Descreva sua tarefa" não pode estar vazio!');
+                return;
+            }
+        
+            let task = {
+                id: uuid(),
+                description: description,
+                done: false,
+                edit: false
+            };
+        
+            setTasks([...tasks, task]);
+            setDescription("");
+        
+            console.log(task);
         }
 
-        setTasks([...tasks, task]);
-        setDescription("");
 
-        console.log(task)
-    }
     
     //Delete Task
     const DeleteTask = (id) => {
@@ -36,6 +44,7 @@ function Home(){
 
     //Edit Mode
     const EditTask = (id) => {
+        
         let newList = [];
 
         tasks.map((task) => {
@@ -50,6 +59,11 @@ function Home(){
 
     //Confirm edit task
     const EditTaskConfirm = (description, id) => {
+        if (description.trim().length === 0) {
+            alert('O campo não pode estar vazio!');
+            return;
+        }
+
         let newList = [];
 
         tasks.map((task) => {
@@ -98,7 +112,18 @@ function Home(){
         <h2>Quais são os seus planos para hoje?</h2>
     
         <div className="form-task">
-            <input value={description} onChange={(e) => setDescription(e.target.value)} className="task-input" type="text" name="task" id="task" placeholder="Descreva sua tarefa..."/>
+            <input value={description} 
+            onChange={(e) => setDescription(e.target.value)} 
+            onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                    AddTask();
+                }
+            }}
+            className="task-input" 
+            type="text" 
+            name="task" 
+            id="task" 
+            placeholder="Descreva sua tarefa..."/>
             <button onClick={AddTask} className="task-btn">Inserir Tarefa</button>
         </div>
 
